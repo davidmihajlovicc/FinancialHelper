@@ -48,6 +48,7 @@
             guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -67,6 +68,7 @@
             label2.Size = new Size(72, 21);
             label2.TabIndex = 1;
             label2.Text = "Interest:";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -77,6 +79,7 @@
             label3.Size = new Size(82, 21);
             label3.TabIndex = 2;
             label3.Text = "Duration:";
+            label3.Click += label3_Click;
             // 
             // label5
             // 
@@ -87,6 +90,7 @@
             label5.Size = new Size(76, 21);
             label5.TabIndex = 7;
             label5.Text = "Amount:";
+            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -97,6 +101,7 @@
             label6.Size = new Size(82, 21);
             label6.TabIndex = 9;
             label6.Text = "Currency:";
+            label6.Click += label6_Click;
             // 
             // radioButton1
             // 
@@ -109,17 +114,19 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "Euro";
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(126, 160);
+            radioButton2.Location = new Point(181, 159);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(56, 20);
             radioButton2.TabIndex = 11;
             radioButton2.TabStop = true;
             radioButton2.Text = "Dollar";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // guna2HtmlLabel1
             // 
@@ -134,6 +141,8 @@
             // 
             // guna2TextBox1
             // 
+            guna2TextBox1.AccessibleName = "guna";
+            guna2TextBox1.AccessibleRole = AccessibleRole.Text;
             guna2TextBox1.BorderColor = Color.Gray;
             guna2TextBox1.BorderThickness = 2;
             guna2TextBox1.CustomizableEdges = customizableEdges1;
@@ -154,6 +163,7 @@
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2TextBox1.Size = new Size(158, 21);
             guna2TextBox1.TabIndex = 14;
+            guna2TextBox1.TextChanged += guna2TextBox1_TextChanged;
             // 
             // guna2TextBox2
             // 
@@ -177,10 +187,13 @@
             guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2TextBox2.Size = new Size(158, 21);
             guna2TextBox2.TabIndex = 15;
+            guna2TextBox2.TextChanged += guna2TextBox2_TextChanged;
             // 
             // guna2TrackBar1
             // 
+            guna2TrackBar1.DisplayFocus = true;
             guna2TrackBar1.FillColor = Color.DarkOliveGreen;
+            guna2TrackBar1.IndicateFocus = true;
             guna2TrackBar1.Location = new Point(126, 199);
             guna2TrackBar1.Maximum = 360;
             guna2TrackBar1.Minimum = 60;
@@ -189,6 +202,7 @@
             guna2TrackBar1.TabIndex = 16;
             guna2TrackBar1.ThumbColor = Color.DarkSlateGray;
             guna2TrackBar1.Value = 60;
+            guna2TrackBar1.Scroll += guna2TrackBar1_Scroll;
             // 
             // guna2Button1
             // 
@@ -209,17 +223,29 @@
             guna2Button1.Size = new Size(180, 49);
             guna2Button1.TabIndex = 17;
             guna2Button1.Text = "Calculate";
+            guna2Button1.Click += guna2Button1_Click;
             // 
             // guna2DragControl1
             // 
             guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             guna2DragControl1.UseTransparentDrag = true;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(446, 199);
+            label4.Name = "label4";
+            label4.Size = new Size(28, 21);
+            label4.TabIndex = 18;
+            label4.Text = "60";
+            // 
             // UserControl1
             // 
             AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
+            Controls.Add(label4);
             Controls.Add(guna2Button1);
             Controls.Add(guna2TrackBar1);
             Controls.Add(guna2TextBox2);
@@ -251,10 +277,11 @@
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        public Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Label label4;
     }
 }
