@@ -72,8 +72,8 @@ namespace FinancialHelper
         {
             
             BankServices credit = new Credit(int.Parse(guna2TextBox1.Text), double.Parse(guna2TextBox2.Text)/100, FinanceUtilities.ChooseCurrency(radioButton1.Checked), guna2TrackBar1.Value);
-            IFinanceCalculator calculator = (IFinanceCalculator)credit;
-            MessageBox.Show($"Your monthly payment is: {calculator.CalculatePayment()} {credit.Currency}");
+            IFinanceCalculator creditCalculator = (IFinanceCalculator)credit;
+            MessageBox.Show($"Your monthly payment is: {creditCalculator.CalculatePayment()} {credit.Currency}");
             
             
         }
