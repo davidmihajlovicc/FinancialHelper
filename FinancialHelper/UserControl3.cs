@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace FinancialHelper
 {
-    public partial class UserControl2 : UserControl
+    public partial class UserControl3 : UserControl
     {
-        public UserControl2()
+        public UserControl3()
         {
             InitializeComponent();
         }
 
-        private void UserControl2_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

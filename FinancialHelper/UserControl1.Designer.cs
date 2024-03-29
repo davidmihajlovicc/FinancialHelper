@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,6 +47,7 @@
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             SuspendLayout();
             // 
             // label1
@@ -60,7 +62,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(38, 122);
+            label2.Location = new Point(36, 113);
             label2.Name = "label2";
             label2.Size = new Size(72, 21);
             label2.TabIndex = 1;
@@ -70,7 +72,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(38, 210);
+            label3.Location = new Point(36, 200);
             label3.Name = "label3";
             label3.Size = new Size(82, 21);
             label3.TabIndex = 2;
@@ -90,7 +92,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(36, 167);
+            label6.Location = new Point(36, 158);
             label6.Name = "label6";
             label6.Size = new Size(82, 21);
             label6.TabIndex = 9;
@@ -100,7 +102,7 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Microsoft Tai Le", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButton1.Location = new Point(126, 168);
+            radioButton1.Location = new Point(126, 159);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(49, 20);
             radioButton1.TabIndex = 10;
@@ -111,7 +113,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(181, 168);
+            radioButton2.Location = new Point(126, 160);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(56, 20);
             radioButton2.TabIndex = 11;
@@ -124,7 +126,7 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Microsoft Tai Le", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel1.Location = new Point(334, 23);
+            guna2HtmlLabel1.Location = new Point(324, 23);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(152, 25);
             guna2HtmlLabel1.TabIndex = 12;
@@ -167,7 +169,7 @@
             guna2TextBox2.Font = new Font("Segoe UI", 9F);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(64, 64, 64);
             guna2TextBox2.HoverState.FillColor = Color.Silver;
-            guna2TextBox2.Location = new Point(126, 122);
+            guna2TextBox2.Location = new Point(126, 120);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '\0';
             guna2TextBox2.PlaceholderText = "";
@@ -179,7 +181,7 @@
             // guna2TrackBar1
             // 
             guna2TrackBar1.FillColor = Color.DarkOliveGreen;
-            guna2TrackBar1.Location = new Point(126, 210);
+            guna2TrackBar1.Location = new Point(126, 199);
             guna2TrackBar1.Maximum = 360;
             guna2TrackBar1.Minimum = 60;
             guna2TrackBar1.Name = "guna2TrackBar1";
@@ -200,7 +202,7 @@
             guna2Button1.FillColor = Color.DarkSlateGray;
             guna2Button1.Font = new Font("Microsoft Tai Le", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(318, 263);
+            guna2Button1.Location = new Point(310, 263);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.PressedColor = Color.DarkSlateGray;
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -208,11 +210,16 @@
             guna2Button1.TabIndex = 17;
             guna2Button1.Text = "Calculate";
             // 
+            // guna2DragControl1
+            // 
+            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl1.UseTransparentDrag = true;
+            // 
             // UserControl1
             // 
             AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = SystemColors.Control;
             Controls.Add(guna2Button1);
             Controls.Add(guna2TrackBar1);
             Controls.Add(guna2TextBox2);
@@ -248,5 +255,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
