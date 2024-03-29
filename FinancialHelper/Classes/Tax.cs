@@ -14,12 +14,11 @@ namespace FinancialHelper
         public string Currency { get; set;}
 
 
-        public Tax(int income, string currency) {
-        Income = income;
-        Currency = currency;
+        public Tax(int income, string currency)
+        {
+            Income = income;
+            Currency = currency;
         }
-
-
 
         public double CalculatePayment()
         {

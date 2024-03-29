@@ -11,9 +11,7 @@ namespace FinancialHelper
         public int Amount { get; set; }
         public double Interest { get; set;}
         public string Currency {  get; set; }
-
         public int Duration { get; set; }
-
 
         public BankServices(int amount, double interest, string currency, int duration)
         {

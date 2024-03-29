@@ -8,7 +8,6 @@ namespace FinancialHelper
 {
     public class Credit : BankServices, IFinanceCalculator
     {
-        
         public Credit(int amount, double interest, string currency, int duration):
             base(amount, interest, currency, duration) { }
 
